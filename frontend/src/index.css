@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+
+
+
+:root {
+  --bg-light: #f8fafc;
+  --bg-dark: #0f172a;
+  --text-light: #1e293b;
+  --text-dark: #f1f5f9;
+  --sidebar-bg: #1e293b;
+  --accent: #38bdf8;
+}
+
+[data-theme="dark"] {
+  --bg-light: var(--bg-dark);
+  --text-light: var(--text-dark);
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: width 0.3s;
+}
+
+.sidebar h2 {
+  text-align: center;
+  padding: 1rem;
+  background: var(--accent);
+  margin: 0;
+  font-weight: 700;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  margin-left: 260px;
+  padding: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    position: fixed;
+    z-index: 100;
+  }
+  .main-content {
+    margin-left: 200px;
+    padding: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
