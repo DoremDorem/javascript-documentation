@@ -26,18 +26,18 @@ export default function Variables() {
       <p className="mb-2">2. A chat application – the information might include users, messages, and much more.</p>
       <p className="mb-2">To create a variable in JavaScript, use the let keyword.</p>
       <p className="mb-2">The statement below creates (in other words: declares) a variable with the name “message”:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let message;`}
       </SyntaxHighlighter>
       <p className="mb-2">Now, we can put some data into it by using the assignment operator =:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
     {`
     let message;
     message = 'Hello'; // store the string 'Hello' in the variable named message
     `}
       </SyntaxHighlighter>
      <p className="mb-2">The string is now saved into the memory area associated with the variable. We can access it using the variable name:</p>  
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
          {
        `let message;
 message = 'Hello!';
@@ -45,29 +45,29 @@ alert(message); // shows the variable content`
          }
       </SyntaxHighlighter>
       <p className="mb-2">To be concise, we can combine the variable declaration and assignment into a single line:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
        {` let message = 'Hello!'; // define the variable and assign the value
 alert(message); // Hello!`}
       </SyntaxHighlighter>
       <p className="mb-2">We can also declare multiple variables in one line:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let user = 'John', age = 25, message = 'Hello';`}
       </SyntaxHighlighter>
       <p className="mb-2">That might seem shorter, but we don’t recommend it. For the sake of better readability, please use a single line per variable.</p>
       <p className="mb-2">The multiline variant is a bit longer, but easier to read:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let user = 'John';
 let age = 25;
 let message = 'Hello';`}
       </SyntaxHighlighter>
       <p className="mb-2">Some people also define multiple variables in this multiline style:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let user = 'John',
   age = 25,
   message = 'Hello';`}
       </SyntaxHighlighter>
       <p className="mb-2">…Or even in the “comma-first” style:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let user = 'John'
   , age = 25
   , message = 'Hello';`}
@@ -76,7 +76,7 @@ let message = 'Hello';`}
       <div className="p-5 shadow-lg bg-light border border-gray-500">
          <p className="mb-2"><strong>var</strong> instead of <strong>let</strong></p>
          <p className="mb-2">In older scripts, you may also find another keyword: <strong>var</strong> instead of <strong>let</strong>:</p>
-         <SyntaxHighlighter language="javascript" style={oneDark}>
+         <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`var message = 'Hello';`}
          </SyntaxHighlighter>
          <p className="mb-2">The <strong>var</strong> keyword is almost the same as <strong>let</strong>. It also declares a variable but in a slightly different, “old-school” way.</p>
@@ -85,7 +85,7 @@ let message = 'Hello';`}
       <h1 className="mb-2 mt-2 text-2xl font-bold">A real-life analogy</h1>
       <p className="mb-2">We can easily grasp the concept of a “variable” if we imagine it as a “box” for data, with a uniquely-named sticker on it.</p>
       <p className="mb-2">For instance, the variable message can be imagined as a box labelled "message" with the value "Hello!" in it:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let message;
 
 message = 'Hello!';
@@ -96,7 +96,7 @@ alert(message);`}
       </SyntaxHighlighter>
       <p className="mb-2">When the value is changed, the old data is removed from the variable:</p>
       <p className="mb-2">We can also declare two variables and copy data from one into the other.</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let hello = 'Hello world!';
 
 let message;
@@ -112,7 +112,7 @@ alert(message); // Hello world!`}
       <p className="font-bold mb-2">Declaring twice triggers an error</p>
       <p className="mb-2">A variable should be declared only once.</p>
       <p className="mb-2">A repeated declaration of the same variable is an error:</p>
-      <SyntaxHighlighter language="javascript" style={oneDark}>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
        {`let message = "This";
 
 // repeated 'let' leads to an error
@@ -132,7 +132,7 @@ let message = "That"; // SyntaxError: 'message' has already been declared`}
        <p>1. The name must contain only letters, digits, or the symbols <strong>$</strong> and <strong>_</strong>.</p>
        <p>2. The first character must not be a digit.</p>
        <p className="mb-2">Examples of valid names:</p>
-       <SyntaxHighlighter language="javascript" style={oneDark}>
+       <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let userName;
 let test123;`}
        </SyntaxHighlighter>
@@ -140,7 +140,7 @@ let test123;`}
        <p className="mb-2">When the name contains multiple words, camelCase is commonly used. That is: words go one after another, each word except first starting with a capital letter: myVeryLongName.</p>
        <p className="mb-2">What’s interesting – the dollar sign '$' and the underscore '_' can also be used in names. They are regular symbols, just like letters, without any special meaning.</p>
        <p className="mb-2">These names are valid:</p>
-       <SyntaxHighlighter language="javascript" style={oneDark}>
+       <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
         {`let $ = 1; // declared a variable with the name "$"
 let _ = 2; // and now a variable with the name "_"
 
@@ -159,7 +159,7 @@ let my-name; // hyphens '-' aren't allowed in the name`}
        <div  className="p-5 bg-light shadow-lg border border-gray-500 mt-4">
         <p className="font-bold mb-2">⚠️ Non-Latin letters are allowed, but not recommended</p>
         <p>It is possible to use any language, including Cyrillic letters, Chinese logograms and so on, like this:</p>
-        <SyntaxHighlighter language="javascript" style={oneDark}>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`let имя = '...';
 let 我 = '...';`}
         </SyntaxHighlighter>
@@ -170,7 +170,7 @@ let 我 = '...';`}
         <p className="mb-2">There is a list of reserved words, which cannot be used as variable names because they are used by the language itself.</p>
         <p className="mb-2">For example: <span className="bg-gray-300">let</span>, <span className="bg-gray-300">class</span>, <span className="bg-gray-300">return</span>, and <span className="bg-gray-300">function</span> are reserved.</p>
         <p className="mb-2">The code below gives a syntax error:</p>
-        <SyntaxHighlighter language="javascript" style={oneDark}>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`let let = 5; // can't name a variable "let", error!
 let return = 5; // also can't name it "return", error!`}
         </SyntaxHighlighter>
@@ -179,7 +179,7 @@ let return = 5; // also can't name it "return", error!`}
         <div className="p-5 bg-light shadow-lg border border-gray-500 mt-4">
           <p className="mb-2 font-bold">⚠️An assignment without use strict</p>
           <p className="mb-2">Normally, we need to define a variable before using it. But in the old times, it was technically possible to create a variable by a mere assignment of the value without using <span className="bg-gray-300">let</span>. This still works now if we don’t put <span className="bg-gray-300">use strict</span> in our scripts to maintain compatibility with old scripts.</p>
-          <SyntaxHighlighter language="javascript" style={oneDark}>
+          <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
             {`// note: no "use strict" in this example
 
 num = 5; // the variable "num" is created if it didn't exist
@@ -187,7 +187,7 @@ num = 5; // the variable "num" is created if it didn't exist
 alert(num); // 5`}
           </SyntaxHighlighter>
           <p className="mb-2">This is a bad practice and would cause an error in strict mode:</p>
-          <SyntaxHighlighter language="javascript" style={oneDark}>
+          <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
              {`"use strict";
 
 num = 5; // error: num is not defined`}
@@ -197,11 +197,11 @@ num = 5; // error: num is not defined`}
 
         <h1 className="mt-3 mb-2 text-2xl font-bold">Constants</h1>
         <p className="mb-2">To declare a constant (unchanging) <span className="bg-gray-200">variable</span>, use <span className="bg-gray-200">const</span> instead of let:</p>
-        <SyntaxHighlighter language="javascript" style={oneDark}>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`const myBirthday = '18.04.1982';`}
         </SyntaxHighlighter>
         <p className="mb-2">Variables declared using const are called “constants”. They cannot be reassigned. An attempt to do so would cause an error:</p>
-        <SyntaxHighlighter language="javascript" style={oneDark}>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`const myBirthday = '18.04.1982';
 
 myBirthday = '01.01.2001'; // error, can't reassign the constant!`}
@@ -211,7 +211,7 @@ myBirthday = '01.01.2001'; // error, can't reassign the constant!`}
         <p className="mb-2">There is a widespread practice to use constants as aliases for difficult-to-remember values that are known before execution.</p>
         <p className="mb-2">Such constants are named using capital letters and underscores.</p>
         <p className="mb-2">For instance, let’s make constants for colors in so-called “web” (hexadecimal) format:</p>
-         <SyntaxHighlighter language="javascript" style={oneDark}>
+         <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`const COLOR_RED = "#F00";
 const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
@@ -228,7 +228,7 @@ alert(color); // #FF7F00`}
          <p className="mb-2">When should we use capitals for a constant and when should we name it normally? Let’s make that clear.</p>
          <p className="mb-2">Being a “constant” just means that a variable’s value never changes. But some constants are known before execution (like a hexadecimal value for red) and some constants are calculated in run-time, during the execution, but do not change after their initial assignment.</p>
          <p className="mb-2">For instance:</p>
-         <SyntaxHighlighter language="javascript" style={oneDark}>
+         <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
           {`const pageLoadTime = /* time taken by a webpage to load */;`}
          </SyntaxHighlighter>
          <p className="mb-2">The value of <span className="bg-gray-300">pageLoadTime</span> is not known before the page load, so it’s named normally. But it’s still a constant because it doesn’t change after the assignment.</p>
