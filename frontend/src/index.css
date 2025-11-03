@@ -60,11 +60,6 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.main-content {
-  margin-left: 260px;
-  padding: 2rem;
-}
-
 
 @media (max-width: 768px) {
   .sidebar {
@@ -72,9 +67,18 @@ body {
     position: fixed;
     z-index: 100;
   }
+}
+
+
+.main-content {
+  margin-left: 16rem; /* width of sidebar (64) */
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
   .main-content {
-    margin-left: 200px;
-    padding: 1rem;
+    margin-left: 0;
+    padding-top: 4rem; /* space for toggle button */
   }
 }
 @media (max-width: 640px) {

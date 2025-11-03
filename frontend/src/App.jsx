@@ -12,6 +12,9 @@ import Operator from "./pages/Operator";
 import DataType from "./pages/Datatype";
 import ConditionalStatement from "./pages/ConditionalStatement";
 import Loop from "./pages/Loop";
+import EventsInJS from "./pages/EventsInJS";
+import DOMInJS from "./pages/DOMInJS";
+import StorageInJS from "./pages/StorageInJS";
 
 
 export default function App() {
@@ -33,6 +36,9 @@ export default function App() {
           <Route path="/data-type" element={<DataType/>}/>
           <Route path="/condition-statement" element={<ConditionalStatement/>}/>
           <Route path="/loop" element={<Loop/>}/>
+          <Route path="/event" element={<EventsInJS/>}/>
+          <Route path="/dom" element={<DOMInJS/>}/>
+          <Route path="/storage" element={<StorageInJS/>}/>
         </Routes>
       </main>
     </Router>

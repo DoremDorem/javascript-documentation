@@ -9,6 +9,9 @@ const topics = [
   { id: 8, title: "Arrays", path: "/arrays" },
   { id: 9, title: "Objects", path: "/objects" },
   { id: 10, title: "ES6 Features", path: "/es6" },
+  { id: 11, title: "JS Event", path: "/event" },
+  { id: 12, title: "DOM", path: "/dom" },
+  { id: 13, title: "Storage", path: "/storage" },
 ];
 
 export default topics;
