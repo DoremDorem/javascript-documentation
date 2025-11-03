@@ -8,6 +8,10 @@ import Functions from "./pages/Functions";
 import Objects from "./pages/Objects";
 import ES6Features from "./pages/ES6Features";
 import Arrays from "./pages/Arrays";
+import Operator from "./pages/Operator";
+import DataType from "./pages/Datatype";
+import ConditionalStatement from "./pages/ConditionalStatement";
+import Loop from "./pages/Loop";
 
 
 export default function App() {
@@ -25,6 +29,10 @@ export default function App() {
           <Route path="/arrays" element={<Arrays />} />
           <Route path="/objects" element={<Objects />} />
           <Route path="/es6" element={<ES6Features />} />
+          <Route path="/operator" element={<Operator/>}/>
+          <Route path="/data-type" element={<DataType/>}/>
+          <Route path="/condition-statement" element={<ConditionalStatement/>}/>
+          <Route path="/loop" element={<Loop/>}/>
         </Routes>
       </main>
     </Router>
